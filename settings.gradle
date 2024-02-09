@@ -6,3 +6,5 @@
  */
 
 rootProject.name = 'dis-second-term'
+include 'lab1'
+

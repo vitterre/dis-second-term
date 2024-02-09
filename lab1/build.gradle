@@ -1,0 +1,4 @@
+apply plugin: 'maven-publish'
+
+jar.enabled = true
+war.enabled = false
