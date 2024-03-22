@@ -6,5 +6,8 @@
  */
 
 rootProject.name = 'dis-second-term'
-include 'lab1'
+include 'lab1-dependency-injection'
+include 'lab2-tomcat-embed'
+include 'lab3-orm-validatoin'
+include 'lab4-spring-context-beans'
 

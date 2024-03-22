@@ -7,7 +7,10 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
         </processorPath>
-        <module name="dis-second-term.lab1.main" />
+        <module name="dis-second-term.lab1-dependency-injection.main" />
+        <module name="dis-second-term.lab2-tomcat-embed.main" />
+        <module name="dis-second-term.lab4-spring-context-beans.main" />
+        <module name="dis-second-term.lab3-orm-validatoin.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="21" />

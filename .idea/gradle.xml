@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -7,7 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/lab1" />
+            <option value="$PROJECT_DIR$/lab1-dependency-injection" />
+            <option value="$PROJECT_DIR$/lab2-tomcat-embed" />
+            <option value="$PROJECT_DIR$/lab3-orm-validatoin" />
+            <option value="$PROJECT_DIR$/lab4-spring-context-beans" />
           </set>
         </option>
       </GradleProjectSettings>

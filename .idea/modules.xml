@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab1-dependency-injection/dis-second-term.lab1-dependency-injection.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lab1-dependency-injection/dis-second-term.lab1-dependency-injection.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab2-tomcat-embed/dis-second-term.lab2-tomcat-embed.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lab2-tomcat-embed/dis-second-term.lab2-tomcat-embed.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab3-orm-validatoin/dis-second-term.lab3-orm-validatoin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lab3-orm-validatoin/dis-second-term.lab3-orm-validatoin.main.iml" />
+    </modules>
+  </component>
+</project>

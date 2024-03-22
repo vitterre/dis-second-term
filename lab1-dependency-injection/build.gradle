@@ -1,0 +1,16 @@
+plugins {
+    id "application"
+}
+apply plugin: 'maven-publish'
+apply plugin: 'java'
+
+jar.enabled = true
+war.enabled = false
+
+ext {
+    javaMainClass = "com.technokratos.agona.di.core.Initializer"
+}
+
+application {
+    mainClassName = javaMainClass
+}

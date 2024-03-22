@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.technokratos.agona'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.tomcat.embed:tomcat-embed-core:10.1.18'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:10.1.18'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
