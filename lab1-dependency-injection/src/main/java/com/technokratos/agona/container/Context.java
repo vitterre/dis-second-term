@@ -85,37 +85,4 @@ public class Context {
     public void clear() {
         this.componentContainer.clear();
     }
-
-    public void processRequest(final String method, final String uri) {
-        System.out.println(uri);
-        if (method.equals("GET")) {
-            processGet(uri);
-        }
-    }
-
-    private void processGet(final String uri) {
-        endpointsContrainer.keySet()
-                .forEach(e -> {
-                    val methods = List.of(e.getDeclaredMethods());
-
-                    methods.forEach(m -> {
-                        m.setAccessible(true);
-                        if (m.isAnnotationPresent(Get.class)) {
-                            val methodAnnotation = m.getAnnotation(Get.class);
-                            val endPointAnnotation = e.getAnnotation(Endpoint.class);
-                            val path = endPointAnnotation.path() + methodAnnotation.path();
-
-                            if (uri.equals(path)) {
-                                try {
-                                    val templatePath = m.invoke(endpointsContrainer.get(e));
-                                    System.out.println(templatePath);
-                                } catch (Exception exception) {
-                                    throw new RuntimeException(exception);
-                                }
-                            }
-                        }
-                    });
-
-                });
-    }
 }

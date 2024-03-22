@@ -4,6 +4,7 @@ import com.technokratos.agona.annotation.Column;
 import com.technokratos.agona.annotation.Entity;
 import com.technokratos.agona.annotation.ManyToOne;
 import com.technokratos.agona.annotation.PrimaryKey;
+import com.technokratos.agona.enums.FetchType;
 import com.technokratos.agona.orm.EntityManager;
 import com.technokratos.agona.util.EntityClassLoader;
 import lombok.val;
@@ -224,8 +225,11 @@ public class EntityManagerImpl implements EntityManager {
                     val value = rs.getObject(field.getAnnotation(Column.class).name());
 
                     if (field.isAnnotationPresent(ManyToOne.class)) {
-                        val innerEntity = findById(field.getType(), value);
-                        field.set(entity, innerEntity.orElseThrow());
+                        val relationAnnotation = field.getAnnotation(ManyToOne.class);
+                        if (FetchType.EAGER.equals(relationAnnotation.fetchType())) {
+                            val innerEntity = findById(field.getType(), value);
+                            field.set(entity, innerEntity.orElseThrow());
+                        }
                         continue;
                     }
                     field.set(entity, value);
